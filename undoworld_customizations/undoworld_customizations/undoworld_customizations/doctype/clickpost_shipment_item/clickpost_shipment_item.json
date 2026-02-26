@@ -1,0 +1,207 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-08 16:52:45.929551",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sku",
+  "price",
+  "weight",
+  "hs_code",
+  "column_break_bjnvh",
+  "quantity",
+  "description",
+  "product_id",
+  "variant_id",
+  "additional_section",
+  "manufacture_country",
+  "manufacture_country_code",
+  "cat",
+  "images",
+  "product_url",
+  "return_days",
+  "column_break_ny32y",
+  "exchange_days",
+  "length",
+  "breadth",
+  "height",
+  "brand",
+  "color",
+  "column_break_djvts",
+  "size",
+  "serial_no",
+  "emei",
+  "ean",
+  "sub_category",
+  "return_reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "sku",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "SKU"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Price"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Weight"
+  },
+  {
+   "fieldname": "hs_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "HS Code"
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Quantity"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "product_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Product ID"
+  },
+  {
+   "fieldname": "variant_id",
+   "fieldtype": "Data",
+   "label": "Variant ID"
+  },
+  {
+   "fieldname": "additional_section",
+   "fieldtype": "Section Break",
+   "label": "Additional"
+  },
+  {
+   "fieldname": "manufacture_country",
+   "fieldtype": "Data",
+   "label": "Manufacture Country"
+  },
+  {
+   "fieldname": "manufacture_country_code",
+   "fieldtype": "Data",
+   "label": "Manufacture Country Code"
+  },
+  {
+   "fieldname": "cat",
+   "fieldtype": "Data",
+   "label": "CAT"
+  },
+  {
+   "fieldname": "images",
+   "fieldtype": "Attach Image",
+   "label": "Images"
+  },
+  {
+   "fieldname": "product_url",
+   "fieldtype": "Data",
+   "label": "Product URL"
+  },
+  {
+   "fieldname": "return_days",
+   "fieldtype": "Data",
+   "label": "Return Days"
+  },
+  {
+   "fieldname": "exchange_days",
+   "fieldtype": "Data",
+   "label": "Exchange Days"
+  },
+  {
+   "fieldname": "length",
+   "fieldtype": "Data",
+   "label": "Length"
+  },
+  {
+   "fieldname": "breadth",
+   "fieldtype": "Data",
+   "label": "Breadth"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "label": "Brand"
+  },
+  {
+   "fieldname": "color",
+   "fieldtype": "Data",
+   "label": "Color"
+  },
+  {
+   "fieldname": "size",
+   "fieldtype": "Data",
+   "label": "Size"
+  },
+  {
+   "fieldname": "serial_no",
+   "fieldtype": "Data",
+   "label": "Serial No"
+  },
+  {
+   "fieldname": "emei",
+   "fieldtype": "Data",
+   "label": "EMEI"
+  },
+  {
+   "fieldname": "ean",
+   "fieldtype": "Data",
+   "label": "EAN"
+  },
+  {
+   "fieldname": "sub_category",
+   "fieldtype": "Data",
+   "label": "Sub Category"
+  },
+  {
+   "fieldname": "return_reason",
+   "fieldtype": "Data",
+   "label": "Return Reason"
+  },
+  {
+   "fieldname": "column_break_bjnvh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ny32y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_djvts",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-11-08 17:02:12.032636",
+ "modified_by": "Administrator",
+ "module": "Undoworld Customizations",
+ "name": "Clickpost Shipment Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

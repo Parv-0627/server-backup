@@ -1,0 +1,59 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-06 17:21:35.932886",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "stock_module_section",
+  "stock_update_webhook",
+  "api_key",
+  "warehouse"
+ ],
+ "fields": [
+  {
+   "fieldname": "stock_module_section",
+   "fieldtype": "Section Break",
+   "label": "Stock Module"
+  },
+  {
+   "fieldname": "stock_update_webhook",
+   "fieldtype": "Small Text",
+   "label": "Stock Update Webhook"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Data",
+   "label": "API Key"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-01-06 17:41:58.286146",
+ "modified_by": "Administrator",
+ "module": "Controlz Customizations",
+ "name": "Controlz Setup",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

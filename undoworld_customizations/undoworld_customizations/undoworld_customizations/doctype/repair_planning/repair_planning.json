@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-30 12:48:34.115389",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "repairing_level",
+  "status_level",
+  "qc_date",
+  "column_break_vgnp",
+  "user_doc",
+  "remark"
+ ],
+ "fields": [
+  {
+   "fieldname": "repairing_level",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Repairing Level",
+   "options": "Repairing Level"
+  },
+  {
+   "fieldname": "status_level",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nPending\nIn Progress\nComplete"
+  },
+  {
+   "fieldname": "user_doc",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Small Text",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "qc_date",
+   "fieldtype": "Datetime",
+   "label": "QC Date"
+  },
+  {
+   "fieldname": "column_break_vgnp",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-11 15:11:03.821700",
+ "modified_by": "Administrator",
+ "module": "Undoworld Customizations",
+ "name": "Repair Planning",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

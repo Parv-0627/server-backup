@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-27 09:51:28.906883",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "section_break_ggcc",
+  "bom_raw_material_table"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "section_break_ggcc",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "bom_raw_material_table",
+   "fieldtype": "Table",
+   "label": "BOM Raw Material Table",
+   "options": "BOM Raw Material Table"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-27 09:53:54.290047",
+ "modified_by": "Administrator",
+ "module": "Controlz Production",
+ "name": "Controlz BOM",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

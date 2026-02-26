@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:drop_location_label",
+ "creation": "2024-11-08 16:05:51.782191",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "drop_location_label",
+  "drop_lat",
+  "drop_city",
+  "drop_long",
+  "drop_name",
+  "drop_email",
+  "column_break_n7rlx",
+  "drop_phone",
+  "drop_state",
+  "drop_address",
+  "drop_district",
+  "column_break_sk6ev",
+  "drop_landmark",
+  "drop_pincode",
+  "drop_country",
+  "drop_address_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "drop_lat",
+   "fieldtype": "Data",
+   "label": "Lat"
+  },
+  {
+   "fieldname": "drop_city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "drop_long",
+   "fieldtype": "Data",
+   "label": "Long"
+  },
+  {
+   "fieldname": "drop_name",
+   "fieldtype": "Data",
+   "label": "Name"
+  },
+  {
+   "fieldname": "drop_email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "drop_phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "drop_state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "drop_address",
+   "fieldtype": "Small Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "drop_district",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "fieldname": "drop_landmark",
+   "fieldtype": "Data",
+   "label": "Landmark"
+  },
+  {
+   "fieldname": "drop_pincode",
+   "fieldtype": "Data",
+   "label": "Pincode"
+  },
+  {
+   "fieldname": "drop_country",
+   "fieldtype": "Data",
+   "label": "Country"
+  },
+  {
+   "fieldname": "drop_address_type",
+   "fieldtype": "Select",
+   "label": "Address Type",
+   "options": "OFFICE"
+  },
+  {
+   "fieldname": "drop_location_label",
+   "fieldtype": "Data",
+   "label": "Drop Location Label",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_n7rlx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_sk6ev",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-11-08 16:09:54.836682",
+ "modified_by": "Administrator",
+ "module": "Undoworld Customizations",
+ "name": "Drop Location",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

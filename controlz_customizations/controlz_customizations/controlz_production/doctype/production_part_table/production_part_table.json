@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-12-27 14:59:42.233201",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_to_produce",
+  "qty_to_produce",
+  "part_item",
+  "qty_percentage",
+  "qty_needed",
+  "part_warehouse",
+  "qty_in_warehouse",
+  "final_qty",
+  "projected_qty",
+  "last_purchase_rate"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "item_to_produce",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item To Produce",
+   "options": "Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "qty_to_produce",
+   "fieldtype": "Float",
+   "label": "Qty To Produce",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "part_item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Part Item",
+   "options": "Item"
+  },
+  {
+   "columns": 1,
+   "fieldname": "part_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Part Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "qty_percentage",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty Percentage"
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty_needed",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty Needed"
+  },
+  {
+   "columns": 1,
+   "fieldname": "qty_in_warehouse",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Qty In Warehouse"
+  },
+  {
+   "columns": 1,
+   "fieldname": "final_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Final Qty"
+  },
+  {
+   "columns": 1,
+   "fieldname": "projected_qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Projected Qty"
+  },
+  {
+   "columns": 1,
+   "fieldname": "last_purchase_rate",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Last Purchase Rate"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-12-27 16:03:17.850796",
+ "modified_by": "Administrator",
+ "module": "Controlz Production",
+ "name": "Production Part Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

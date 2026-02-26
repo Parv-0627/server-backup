@@ -1,0 +1,327 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-10-18 15:58:11.371112",
+ "default_view": "List",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "subject_section",
+  "naming_series",
+  "status",
+  "charger_only",
+  "status_reason",
+  "serial_number",
+  "imei",
+  "customer",
+  "cb00",
+  "awb_number_pickup",
+  "awb_number_delivery",
+  "customer_details_section",
+  "customer_name",
+  "mobile_number",
+  "email",
+  "invoice_date",
+  "order_id",
+  "platform",
+  "column_break_baonq",
+  "brand",
+  "device_model",
+  "issue_faced",
+  "sub_issue",
+  "audio_recording",
+  "video_recording",
+  "column_break_ohqtn",
+  "house_number",
+  "street_line_1",
+  "street_line_2",
+  "city",
+  "state",
+  "pincode",
+  "landmark",
+  "section_break_p3yvt",
+  "support_image_table",
+  "sb_details",
+  "description",
+  "tracking_section",
+  "status_tracking",
+  "amended_from",
+  "repair_planning_tab",
+  "repairing_planning"
+ ],
+ "fields": [
+  {
+   "fieldname": "subject_section",
+   "fieldtype": "Section Break",
+   "options": "fa fa-flag"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "no_copy": 1,
+   "options": "ISS-.YYYY.-",
+   "print_hide": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "cb00",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "oldfieldname": "status",
+   "oldfieldtype": "Select",
+   "options": "Pending\nApproved\nWaiting For Pick Arrange\nPick Arranged\nIn Transit\nDevice Received\nDevice Under Repair\nWaiting For Delivery Arrange\nDevice Out for Delivery\nWarrenty Void\nComplete\nReject",
+   "search_index": 1
+  },
+  {
+   "collapsible": 1,
+   "collapsible_depends_on": "eval:doc.status!=\"Closed\"",
+   "fieldname": "sb_details",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "bold": 1,
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "in_global_search": 1,
+   "label": "Description",
+   "oldfieldname": "problem_description",
+   "oldfieldtype": "Text"
+  },
+  {
+   "bold": 1,
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Customer Name",
+   "oldfieldname": "customer_name",
+   "oldfieldtype": "Data"
+  },
+  {
+   "fieldname": "serial_number",
+   "fieldtype": "Data",
+   "label": "Serial Number"
+  },
+  {
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Data",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "email",
+   "fieldtype": "Data",
+   "label": "Email"
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date"
+  },
+  {
+   "fieldname": "order_id",
+   "fieldtype": "Data",
+   "label": "Order ID"
+  },
+  {
+   "fieldname": "platform",
+   "fieldtype": "Data",
+   "label": "Platform"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "label": "Brand"
+  },
+  {
+   "fieldname": "device_model",
+   "fieldtype": "Data",
+   "label": "Device Model"
+  },
+  {
+   "fieldname": "issue_faced",
+   "fieldtype": "Small Text",
+   "label": "Issue Faced"
+  },
+  {
+   "fieldname": "sub_issue",
+   "fieldtype": "Data",
+   "label": "Sub Issue"
+  },
+  {
+   "fieldname": "audio_recording",
+   "fieldtype": "Attach",
+   "label": "Audio Recording"
+  },
+  {
+   "fieldname": "video_recording",
+   "fieldtype": "Attach",
+   "label": "Video Recording"
+  },
+  {
+   "fieldname": "support_image_table",
+   "fieldtype": "Table",
+   "label": "Support Image Table",
+   "options": "Support Image Table"
+  },
+  {
+   "fieldname": "house_number",
+   "fieldtype": "Data",
+   "label": "House Number"
+  },
+  {
+   "fieldname": "street_line_1",
+   "fieldtype": "Data",
+   "label": "Street Line 1"
+  },
+  {
+   "fieldname": "street_line_2",
+   "fieldtype": "Data",
+   "label": "Street Line 2"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "pincode",
+   "fieldtype": "Data",
+   "label": "Pincode"
+  },
+  {
+   "fieldname": "landmark",
+   "fieldtype": "Data",
+   "label": "Landmark"
+  },
+  {
+   "fieldname": "awb_number_pickup",
+   "fieldtype": "Data",
+   "label": "AWB Number Pickup"
+  },
+  {
+   "fieldname": "awb_number_delivery",
+   "fieldtype": "Data",
+   "label": "AWB Number Delivery"
+  },
+  {
+   "fieldname": "column_break_baonq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_ohqtn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Data",
+   "label": "Customer"
+  },
+  {
+   "fieldname": "tracking_section",
+   "fieldtype": "Section Break",
+   "label": "Tracking"
+  },
+  {
+   "fieldname": "status_tracking",
+   "fieldtype": "Table",
+   "label": "Status Tracking",
+   "options": "Status Tracking"
+  },
+  {
+   "fieldname": "status_reason",
+   "fieldtype": "Data",
+   "label": "Status Reason"
+  },
+  {
+   "fieldname": "imei",
+   "fieldtype": "Data",
+   "label": "IMEI"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Support Ticket",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "repair_planning_tab",
+   "fieldtype": "Tab Break",
+   "label": "Repair Planning"
+  },
+  {
+   "fieldname": "repairing_planning",
+   "fieldtype": "Table",
+   "label": "Repairing Planning",
+   "options": "Repair Planning"
+  },
+  {
+   "default": "0",
+   "fieldname": "charger_only",
+   "fieldtype": "Check",
+   "label": "Charger Only"
+  },
+  {
+   "fieldname": "section_break_p3yvt",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  }
+ ],
+ "icon": "fa fa-ticket",
+ "links": [
+  {
+   "link_doctype": "Clickpost Order",
+   "link_fieldname": "support_ticket"
+  }
+ ],
+ "modified": "2025-03-18 14:00:58.646456",
+ "modified_by": "Administrator",
+ "module": "Undoworld Customizations",
+ "name": "Support Ticket",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Support Team",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sender_field": "raised_by",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "subject_field": "subject",
+ "track_changes": 1,
+ "track_seen": 1
+}

@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-15 14:15:23.174059",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "maps",
+  "cost_center"
+ ],
+ "fields": [
+  {
+   "fieldname": "maps",
+   "fieldtype": "Table",
+   "label": "Contribution Map",
+   "options": "Contribution Map"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center For Journal Entry",
+   "options": "Cost Center"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-01-16 12:10:40.480517",
+ "modified_by": "Administrator",
+ "module": "DT-Frappe HR Add-on",
+ "name": "DT-Frappe HR Add-on Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-12-27 09:48:30.535022",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "item_to_produce",
+  "qty_to_produce",
+  "controlz_bom",
+  "amended_from",
+  "uom",
+  "column_break_tseb",
+  "warehouse",
+  "balance",
+  "final_qty",
+  "work_in_progress_warehouse",
+  "finished_goods_warehouse",
+  "fg_qty",
+  "column_break_ayst",
+  "posting_date",
+  "posting_time",
+  "section_break_habi",
+  "production_planning_raw_material"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_to_produce",
+   "fieldtype": "Link",
+   "label": "Item To Produce",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "PPR-"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Production Planning Record",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "column_break_ayst",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Posting Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qty_to_produce",
+   "fieldtype": "Int",
+   "label": "Qty To Produce",
+   "reqd": 1
+  },
+  {
+   "fieldname": "controlz_bom",
+   "fieldtype": "Link",
+   "label": "Controlz BOM",
+   "options": "Controlz BOM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_habi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.controlz_bom",
+   "fieldname": "production_planning_raw_material",
+   "fieldtype": "Table",
+   "label": "Production Planning Raw Material",
+   "options": "Production Planning Raw Material"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "label": "Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_tseb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "balance",
+   "fieldtype": "Float",
+   "label": "Balance"
+  },
+  {
+   "fieldname": "final_qty",
+   "fieldtype": "Float",
+   "label": "Final Qty"
+  },
+  {
+   "fieldname": "work_in_progress_warehouse",
+   "fieldtype": "Link",
+   "label": "Work In Progress Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fieldname": "finished_goods_warehouse",
+   "fieldtype": "Link",
+   "label": "Finished Goods Warehouse",
+   "options": "Warehouse"
+  },
+  {
+   "fetch_from": "item_to_produce.stock_uom",
+   "fieldname": "uom",
+   "fieldtype": "Link",
+   "label": "UOM",
+   "options": "UOM"
+  },
+  {
+   "fieldname": "fg_qty",
+   "fieldtype": "Float",
+   "label": "FG Qty"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [
+  {
+   "link_doctype": "Stock Entry",
+   "link_fieldname": "production_planning_record"
+  }
+ ],
+ "modified": "2024-12-27 14:51:39.491857",
+ "modified_by": "Administrator",
+ "module": "Controlz Production",
+ "name": "Production Planning Record",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "read_only": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

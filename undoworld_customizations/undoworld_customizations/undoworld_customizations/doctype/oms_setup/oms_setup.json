@@ -1,0 +1,56 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-11-13 08:27:02.069105",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "gst_account",
+  "shipping_account",
+  "order_status_update_webhook"
+ ],
+ "fields": [
+  {
+   "fieldname": "gst_account",
+   "fieldtype": "Link",
+   "label": "GST Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "shipping_account",
+   "fieldtype": "Link",
+   "label": "Shipping Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "order_status_update_webhook",
+   "fieldtype": "Text",
+   "label": "Order Status Update Webhook"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-11-13 08:53:17.942504",
+ "modified_by": "Administrator",
+ "module": "Undoworld Customizations",
+ "name": "OMS Setup",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

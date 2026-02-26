@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{clickpost_partner_id}-{clickpost_partner_name}",
+ "creation": "2025-03-11 09:58:50.781475",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "clickpost_partner_name",
+  "clickpost_partner_id",
+  "reference_number",
+  "supplier",
+  "column_break_uvaj",
+  "account_name",
+  "account_id",
+  "active",
+  "is_rvp"
+ ],
+ "fields": [
+  {
+   "fieldname": "clickpost_partner_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Account Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "clickpost_partner_id",
+   "fieldtype": "Data",
+   "label": "Clickpost Partner ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference_number",
+   "fieldtype": "Data",
+   "label": "Reference Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_uvaj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Clickpost Partner Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "account_id",
+   "fieldtype": "Data",
+   "label": "Account ID",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "active",
+   "fieldtype": "Check",
+   "label": "Active",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_rvp",
+   "fieldtype": "Check",
+   "label": "Is RVP",
+   "read_only": 1
+  },
+  {
+   "description": "Please map ERPNext supplier here to handle E-Waybill Scenario",
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-15 14:54:29.708635",
+ "modified_by": "Administrator",
+ "module": "Clickpost Erpnext Integration",
+ "name": "Carrier Partner",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,119 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "ASCL.####",
+ "creation": "2025-05-12 23:52:27.567061",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "shipment_reference",
+  "awb_number",
+  "recommendation_status",
+  "recommendation_message",
+  "column_break_mrgd",
+  "shipment_creation_time",
+  "allocated_carrier",
+  "account_name",
+  "order_creation_status",
+  "section_break_iggg",
+  "recommendation_reference"
+ ],
+ "fields": [
+  {
+   "fieldname": "shipment_reference",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Shipment Reference",
+   "options": "Shipment",
+   "read_only": 1
+  },
+  {
+   "fieldname": "awb_number",
+   "fieldtype": "Data",
+   "label": "AWB Number"
+  },
+  {
+   "fieldname": "recommendation_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Recommendation Status",
+   "options": "True\nFalse",
+   "read_only": 1
+  },
+  {
+   "fieldname": "recommendation_message",
+   "fieldtype": "Code",
+   "in_global_search": 1,
+   "label": "Recommendation Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_mrgd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "shipment_creation_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Shipment Creation Time",
+   "read_only": 1
+  },
+  {
+   "fieldname": "allocated_carrier",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Allocated Carrier",
+   "read_only": 1
+  },
+  {
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Account Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "order_creation_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Order Creation Status",
+   "options": "Error\nSuccess\nPending",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_iggg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "recommendation_reference",
+   "fieldtype": "Table",
+   "label": "Recommendation Reference",
+   "options": "Shipment Creation Log Table",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-05-16 00:33:30.512770",
+ "modified_by": "Administrator",
+ "module": "Clickpost Erpnext Integration",
+ "name": "Auto Shipment Creation Logs",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

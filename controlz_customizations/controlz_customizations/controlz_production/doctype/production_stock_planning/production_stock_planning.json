@@ -1,0 +1,123 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-12-27 14:52:31.078847",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "warehouse",
+  "part_warehouse",
+  "column_break_urtp",
+  "posting_date",
+  "posting_time",
+  "section_break_xdnq",
+  "item_group_wise_table",
+  "production_stock_planning_table",
+  "production_part_table",
+  "estimated_purchase_cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "PSP-."
+  },
+  {
+   "fieldname": "column_break_urtp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Posting Date",
+   "reqd": 1
+  },
+  {
+   "default": "Now",
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Posting Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_xdnq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "production_stock_planning_table",
+   "fieldtype": "Table",
+   "label": "Production Stock Planning Table",
+   "options": "Production Stock Planning Table"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "FG Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "production_part_table",
+   "fieldtype": "Table",
+   "label": "Production Part Table",
+   "options": "Production Part Table",
+   "read_only": 1
+  },
+  {
+   "fieldname": "part_warehouse",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Part Warehouse",
+   "options": "Warehouse",
+   "reqd": 1
+  },
+  {
+   "fieldname": "estimated_purchase_cost",
+   "fieldtype": "Currency",
+   "label": "Estimated Purchase Cost"
+  },
+  {
+   "fieldname": "item_group_wise_table",
+   "fieldtype": "Table",
+   "label": "Item Group Wise Table",
+   "options": "Item Group Wise Table"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Material Request",
+   "link_fieldname": "production_stock_planning"
+  }
+ ],
+ "modified": "2024-12-27 18:55:24.214864",
+ "modified_by": "Administrator",
+ "module": "Controlz Production",
+ "name": "Production Stock Planning",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

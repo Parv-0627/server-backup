@@ -1,0 +1,115 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-03-11 09:21:48.099355",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "timestamp",
+  "clickpost_status_code",
+  "created_at",
+  "is_latest",
+  "checkpoint_id",
+  "tracking_id",
+  "column_break_nxby",
+  "location",
+  "status",
+  "clickup_status_bucket",
+  "remark",
+  "clickpost_status_bucket_description",
+  "clickpost_status_description"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "created_at",
+   "fieldtype": "Datetime",
+   "label": "Created At",
+   "read_only": 1
+  },
+  {
+   "fieldname": "clickpost_status_code",
+   "fieldtype": "Data",
+   "label": "Clickpost Status Code"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "timestamp",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Timestamp",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_nxby",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Location"
+  },
+  {
+   "fieldname": "remark",
+   "fieldtype": "Data",
+   "label": "Remark"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "clickup_status_bucket",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Clickup Status Bucket"
+  },
+  {
+   "fieldname": "checkpoint_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Checkpoint ID"
+  },
+  {
+   "fieldname": "tracking_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Tracking ID"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "is_latest",
+   "fieldtype": "Check",
+   "label": "Is Latest",
+   "read_only": 1
+  },
+  {
+   "fieldname": "clickpost_status_bucket_description",
+   "fieldtype": "Data",
+   "label": "ClickPost Status Bucket Description"
+  },
+  {
+   "fieldname": "clickpost_status_description",
+   "fieldtype": "Data",
+   "label": "Clickpost Status Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-04-09 19:23:43.008366",
+ "modified_by": "Administrator",
+ "module": "Clickpost Erpnext Integration",
+ "name": "Shipment Update",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

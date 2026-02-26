@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-05-12 23:58:59.971851",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "carrier_name",
+  "status",
+  "message",
+  "clickpost_log"
+ ],
+ "fields": [
+  {
+   "fieldname": "carrier_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Carrier Name"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Status"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Code",
+   "in_list_view": 1,
+   "label": "Message"
+  },
+  {
+   "fieldname": "clickpost_log",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Clickpost Log",
+   "options": "Clickpost Log"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-05-22 03:28:53.903196",
+ "modified_by": "Administrator",
+ "module": "Clickpost Erpnext Integration",
+ "name": "Shipment Creation Log Table",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

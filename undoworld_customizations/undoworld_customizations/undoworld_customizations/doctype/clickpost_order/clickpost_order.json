@@ -1,0 +1,432 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-11-08 15:50:11.958306",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "support_ticket",
+  "sales_order",
+  "verified",
+  "pickup_type",
+  "column_break_x3pz6",
+  "posting_date",
+  "posting_time",
+  "drop_location",
+  "pickup_info_section",
+  "pickup_lat",
+  "pickup_long",
+  "pickup_city",
+  "pickup_name",
+  "pickup_time",
+  "pickup_email",
+  "column_break_luuxf",
+  "pickup_phone",
+  "pickup_phone_code",
+  "pickup_state",
+  "pickup_district",
+  "pickup_landmark",
+  "pickup_address",
+  "column_break_sacao",
+  "pickup_pincode",
+  "pickup_country",
+  "pickup_address_type",
+  "shipment_details_section",
+  "clickpost_shipment_item",
+  "section_break_wbzfu",
+  "height",
+  "length",
+  "weight",
+  "breadth",
+  "order_id",
+  "cod_value",
+  "column_break_4nssz",
+  "cod_currency_code",
+  "order_type",
+  "invoice_date",
+  "delivery_type",
+  "invoice_value",
+  "column_break_q3okd",
+  "invoice_number",
+  "carrier",
+  "courier_partner",
+  "account_code",
+  "reference_number",
+  "reseller_name",
+  "rvp_reason",
+  "amended_from",
+  "api_data_section",
+  "payload",
+  "api_respone",
+  "order_data_section",
+  "label",
+  "waybill",
+  "column_break_uhuqj",
+  "token_number",
+  "tracking_id"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "CLKPST-.#######"
+  },
+  {
+   "fieldname": "column_break_x3pz6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "posting_date",
+   "fieldtype": "Date",
+   "label": "Posting Date"
+  },
+  {
+   "default": "Now",
+   "fieldname": "posting_time",
+   "fieldtype": "Time",
+   "label": "Posting TIme"
+  },
+  {
+   "fieldname": "pickup_info_section",
+   "fieldtype": "Section Break",
+   "label": "Pickup Info"
+  },
+  {
+   "fieldname": "pickup_lat",
+   "fieldtype": "Data",
+   "label": "Pickup Lat"
+  },
+  {
+   "fieldname": "pickup_long",
+   "fieldtype": "Data",
+   "label": "Pickup Long"
+  },
+  {
+   "fieldname": "pickup_city",
+   "fieldtype": "Data",
+   "label": "City",
+   "mandatory_depends_on": "eval:doc.verified"
+  },
+  {
+   "fieldname": "pickup_name",
+   "fieldtype": "Data",
+   "label": "Name",
+   "mandatory_depends_on": "eval:doc.verified"
+  },
+  {
+   "fieldname": "pickup_time",
+   "fieldtype": "Datetime",
+   "label": "Time",
+   "mandatory_depends_on": "eval:doc.verified"
+  },
+  {
+   "fieldname": "pickup_email",
+   "fieldtype": "Data",
+   "label": "Email",
+   "mandatory_depends_on": "eval:doc.verified"
+  },
+  {
+   "fieldname": "pickup_phone",
+   "fieldtype": "Data",
+   "label": "Phone",
+   "mandatory_depends_on": "eval:doc.verified"
+  },
+  {
+   "fieldname": "pickup_state",
+   "fieldtype": "Data",
+   "label": "State",
+   "mandatory_depends_on": "eval:doc.verified"
+  },
+  {
+   "fieldname": "pickup_address",
+   "fieldtype": "Small Text",
+   "label": "Address",
+   "mandatory_depends_on": "eval:doc.verified"
+  },
+  {
+   "fieldname": "pickup_district",
+   "fieldtype": "Data",
+   "label": "District"
+  },
+  {
+   "fieldname": "pickup_landmark",
+   "fieldtype": "Data",
+   "label": "Landmark"
+  },
+  {
+   "fieldname": "pickup_pincode",
+   "fieldtype": "Data",
+   "label": "Pincode",
+   "mandatory_depends_on": "eval:doc.verified"
+  },
+  {
+   "default": "IN",
+   "fieldname": "pickup_country",
+   "fieldtype": "Select",
+   "label": "Country",
+   "mandatory_depends_on": "eval:doc.verified",
+   "options": "IN"
+  },
+  {
+   "fieldname": "pickup_address_type",
+   "fieldtype": "Select",
+   "label": "Pickup Address Type",
+   "options": "RESIDENTIAL"
+  },
+  {
+   "fieldname": "column_break_luuxf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_sacao",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "verified",
+   "fieldtype": "Check",
+   "label": "Verified"
+  },
+  {
+   "fieldname": "drop_location",
+   "fieldtype": "Link",
+   "label": "Drop Location",
+   "mandatory_depends_on": "eval:doc.verified",
+   "options": "Drop Location"
+  },
+  {
+   "fieldname": "shipment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Shipment Details"
+  },
+  {
+   "fieldname": "clickpost_shipment_item",
+   "fieldtype": "Table",
+   "label": "Clickpost Shipment Item",
+   "options": "Clickpost Shipment Item"
+  },
+  {
+   "fieldname": "section_break_wbzfu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "height",
+   "fieldtype": "Data",
+   "label": "Height"
+  },
+  {
+   "fieldname": "length",
+   "fieldtype": "Data",
+   "label": "Length"
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Data",
+   "label": "Weight"
+  },
+  {
+   "fieldname": "breadth",
+   "fieldtype": "Data",
+   "label": "Breadth"
+  },
+  {
+   "fieldname": "order_id",
+   "fieldtype": "Data",
+   "label": "Order ID"
+  },
+  {
+   "fieldname": "cod_value",
+   "fieldtype": "Data",
+   "label": "COD Value"
+  },
+  {
+   "fieldname": "cod_currency_code",
+   "fieldtype": "Select",
+   "label": "COD Currency Code",
+   "options": "INR"
+  },
+  {
+   "fieldname": "order_type",
+   "fieldtype": "Select",
+   "label": "Order Type",
+   "options": "\nCOD\nPREPAID"
+  },
+  {
+   "fieldname": "invoice_date",
+   "fieldtype": "Date",
+   "label": "Invoice Date"
+  },
+  {
+   "fieldname": "delivery_type",
+   "fieldtype": "Select",
+   "label": "Delivery Type",
+   "options": "\nRVP\nFORWARD"
+  },
+  {
+   "fieldname": "invoice_value",
+   "fieldtype": "Data",
+   "label": "Invoice Value"
+  },
+  {
+   "fieldname": "invoice_number",
+   "fieldtype": "Data",
+   "label": "Invoice Number"
+  },
+  {
+   "fetch_from": "carrier.carrier_code",
+   "fieldname": "courier_partner",
+   "fieldtype": "Data",
+   "label": "Courier Partner",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference_number",
+   "fieldtype": "Data",
+   "label": "reference_number"
+  },
+  {
+   "fetch_from": "carrier.account_code",
+   "fieldname": "account_code",
+   "fieldtype": "Data",
+   "label": "account_code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reseller_name",
+   "fieldtype": "Data",
+   "label": "reseller_name"
+  },
+  {
+   "fieldname": "column_break_4nssz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_q3okd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Clickpost Order",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "api_data_section",
+   "fieldtype": "Section Break",
+   "label": "API Data"
+  },
+  {
+   "fieldname": "payload",
+   "fieldtype": "Text",
+   "label": "Payload"
+  },
+  {
+   "fieldname": "pickup_phone_code",
+   "fieldtype": "Data",
+   "label": "Pickup Phone Code"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "api_respone",
+   "fieldtype": "Text",
+   "label": "API Respone",
+   "read_only": 1
+  },
+  {
+   "fieldname": "support_ticket",
+   "fieldtype": "Link",
+   "label": "Support Ticket",
+   "options": "Support Ticket",
+   "read_only": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "pickup_type",
+   "fieldtype": "Select",
+   "label": "Pickup Type",
+   "options": "From Customer\nTo Customer"
+  },
+  {
+   "fieldname": "carrier",
+   "fieldtype": "Link",
+   "label": "Carrier",
+   "options": "Carrier"
+  },
+  {
+   "fieldname": "rvp_reason",
+   "fieldtype": "Data",
+   "label": "rvp_reason"
+  },
+  {
+   "fieldname": "order_data_section",
+   "fieldtype": "Tab Break",
+   "label": "Order Data"
+  },
+  {
+   "fieldname": "label",
+   "fieldtype": "Attach",
+   "label": "Label"
+  },
+  {
+   "fieldname": "waybill",
+   "fieldtype": "Data",
+   "label": "Waybill"
+  },
+  {
+   "fieldname": "token_number",
+   "fieldtype": "Data",
+   "label": "Token Number"
+  },
+  {
+   "fieldname": "tracking_id",
+   "fieldtype": "Data",
+   "label": "Tracking Id"
+  },
+  {
+   "fieldname": "column_break_uhuqj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sales_order",
+   "fieldtype": "Link",
+   "label": "Sales Order",
+   "options": "Sales Order"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-04-19 14:17:41.765046",
+ "modified_by": "Administrator",
+ "module": "Undoworld Customizations",
+ "name": "Clickpost Order",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

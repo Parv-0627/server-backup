@@ -1,0 +1,681 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "AWB.MM.YY.-.######",
+ "creation": "2025-04-17 06:52:32.419285",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_jixj",
+  "awb_number",
+  "carrier_partner",
+  "shipment_id",
+  "pod_file",
+  "amended_from",
+  "status",
+  "column_break_cmjw",
+  "carrier_partner_id",
+  "carrier_account_name",
+  "tracking_status",
+  "tracking_status_info",
+  "clickpost_status",
+  "section_break_adwu",
+  "shipment_update",
+  "non_mandatory_fields_section",
+  "heading_pickup_from",
+  "pickup_from_type",
+  "pickup_company",
+  "pickup_customer",
+  "pickup_supplier",
+  "pickup",
+  "pickup_address_name",
+  "pickup_address",
+  "pickup_contact_person",
+  "pickup_contact_name",
+  "pickup_contact_person_name",
+  "pickup_contact_phone",
+  "pickup_contact_email",
+  "pickup_contact",
+  "column_break_2",
+  "heading_delivery_to",
+  "delivery_to_type",
+  "delivery_company",
+  "delivery_customer",
+  "delivery_supplier",
+  "delivery_to",
+  "delivery_address_name",
+  "delivery_address",
+  "delivery_contact_name",
+  "delivery_contact_email",
+  "delivery_contact_phone",
+  "delivery_contact",
+  "appointment_info_section",
+  "start_time",
+  "reason_for_appointment",
+  "appointment_status",
+  "column_break_zyrm",
+  "end_time",
+  "appointment_attachments",
+  "parcels_section",
+  "shipment_parcel",
+  "parcel_template",
+  "add_template",
+  "total_weight",
+  "delivery_type",
+  "order_type",
+  "column_break_28",
+  "shipment_delivery_note",
+  "sales_invoice",
+  "cod_value",
+  "shipment_details_section",
+  "pallets",
+  "value_of_goods",
+  "pickup_date",
+  "pickup_from",
+  "pickup_to",
+  "column_break_36",
+  "shipment_type",
+  "pickup_type",
+  "incoterm",
+  "description_of_content",
+  "shipment_information_section",
+  "service_provider",
+  "shipment_amount",
+  "column_break_55",
+  "tracking_url"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "awb_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "AWb Number",
+   "no_copy": 1,
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "AWB Registration",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "description": "Select your preferred carrier partner to create shipment",
+   "fieldname": "carrier_partner",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Carrier Partner",
+   "options": "Carrier Partner"
+  },
+  {
+   "fetch_from": "carrier_partner.clickpost_partner_id",
+   "fieldname": "carrier_partner_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Carrier Partner ID",
+   "read_only_depends_on": "eval:doc.carrier_partner !== undefined"
+  },
+  {
+   "fetch_from": "carrier_partner.clickpost_partner_name",
+   "fieldname": "carrier_account_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Carrier Account Name",
+   "read_only_depends_on": "eval:doc.carrier_partner !== undefined"
+  },
+  {
+   "fieldname": "column_break_cmjw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "shipment_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Shipment ID",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tracking_status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Tracking Status",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "tracking_status_info",
+   "fieldtype": "Data",
+   "label": "Tracking Status Info",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "pod_file",
+   "fieldtype": "Attach",
+   "label": "POD File",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_adwu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "shipment_update",
+   "fieldtype": "Table",
+   "label": "Shipment Update",
+   "no_copy": 1,
+   "options": "Shipment Update",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "clickpost_status",
+   "fieldtype": "Data",
+   "label": "Clickpost Status",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "non_mandatory_fields_section",
+   "fieldtype": "Section Break",
+   "label": "Non Mandatory Fields"
+  },
+  {
+   "fieldname": "heading_pickup_from",
+   "fieldtype": "Heading",
+   "label": "Pickup from"
+  },
+  {
+   "default": "Company",
+   "fieldname": "pickup_from_type",
+   "fieldtype": "Select",
+   "label": "Pickup from",
+   "options": "Company\nCustomer\nSupplier"
+  },
+  {
+   "depends_on": "eval:doc.pickup_from_type == 'Company'",
+   "fieldname": "pickup_company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "depends_on": "eval:doc.pickup_from_type == 'Customer'",
+   "fieldname": "pickup_customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "depends_on": "eval:doc.pickup_from_type == 'Supplier'",
+   "fieldname": "pickup_supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "pickup",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Pickup From",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.pickup_customer || doc.pickup_supplier || doc.pickup_from_type == \"Company\"",
+   "fieldname": "pickup_address_name",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "pickup_address",
+   "fieldtype": "Small Text",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.pickup_customer || doc.pickup_supplier || doc.pickup_from_type !== \"Company\"",
+   "fieldname": "pickup_contact_name",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "mandatory_depends_on": "eval: doc.pickup_from_type !== 'Company'",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "pickup_contact_email",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Contact Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "pickup_contact",
+   "fieldtype": "Small Text",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "heading_delivery_to",
+   "fieldtype": "Heading",
+   "label": "Delivery to"
+  },
+  {
+   "default": "Customer",
+   "fieldname": "delivery_to_type",
+   "fieldtype": "Select",
+   "label": "Delivery to",
+   "options": "Company\nCustomer\nSupplier"
+  },
+  {
+   "depends_on": "eval:doc.delivery_to_type == 'Company'",
+   "fieldname": "delivery_company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "depends_on": "eval:doc.delivery_to_type == 'Customer'",
+   "fieldname": "delivery_customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "depends_on": "eval:doc.delivery_to_type == 'Supplier'",
+   "fieldname": "delivery_supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier"
+  },
+  {
+   "fieldname": "delivery_to",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Delivery To",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.delivery_customer || doc.delivery_supplier || doc.delivery_to_type == \"Company\"",
+   "fieldname": "delivery_address_name",
+   "fieldtype": "Link",
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "delivery_address",
+   "fieldtype": "Small Text",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: doc.delivery_customer || doc.delivery_supplier || doc.delivery_to_type == \"Company\"",
+   "fieldname": "delivery_contact_name",
+   "fieldtype": "Link",
+   "label": "Contact",
+   "options": "Contact"
+  },
+  {
+   "fieldname": "delivery_contact_email",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Contact Email",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.delivery_contact_name",
+   "fieldname": "delivery_contact",
+   "fieldtype": "Small Text",
+   "read_only": 1
+  },
+  {
+   "fieldname": "parcels_section",
+   "fieldtype": "Section Break",
+   "label": "Parcels"
+  },
+  {
+   "fieldname": "shipment_parcel",
+   "fieldtype": "Table",
+   "label": "Shipment Parcel",
+   "options": "Shipment Parcel"
+  },
+  {
+   "fieldname": "parcel_template",
+   "fieldtype": "Link",
+   "label": "Parcel Template",
+   "options": "Shipment Parcel Template"
+  },
+  {
+   "depends_on": "eval:doc.docstatus !== 1\n",
+   "fieldname": "add_template",
+   "fieldtype": "Button",
+   "label": "Add Template"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "shipment_details_section",
+   "fieldtype": "Section Break",
+   "label": "Shipment details"
+  },
+  {
+   "default": "No",
+   "fieldname": "pallets",
+   "fieldtype": "Select",
+   "label": "Pallets",
+   "options": "No\nYes"
+  },
+  {
+   "fieldname": "value_of_goods",
+   "fieldtype": "Currency",
+   "label": "Value of Goods",
+   "precision": "2"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "pickup_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Pickup Date"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "09:00",
+   "fieldname": "pickup_from",
+   "fieldtype": "Time",
+   "label": "Pickup from"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "17:00",
+   "fieldname": "pickup_to",
+   "fieldtype": "Time",
+   "label": "Pickup to"
+  },
+  {
+   "fieldname": "column_break_36",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Goods",
+   "fieldname": "shipment_type",
+   "fieldtype": "Select",
+   "label": "Shipment Type",
+   "options": "Goods\nDocuments"
+  },
+  {
+   "default": "Pickup",
+   "fieldname": "pickup_type",
+   "fieldtype": "Select",
+   "label": "Pickup Type",
+   "options": "Pickup\nSelf delivery"
+  },
+  {
+   "fieldname": "description_of_content",
+   "fieldtype": "Small Text",
+   "label": "Description of Content"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "shipment_information_section",
+   "fieldtype": "Section Break",
+   "label": "Shipment Information"
+  },
+  {
+   "fieldname": "service_provider",
+   "fieldtype": "Data",
+   "label": "Service Provider",
+   "no_copy": 1,
+   "print_hide": 1
+  },
+  {
+   "fieldname": "shipment_amount",
+   "fieldtype": "Currency",
+   "label": "Shipment Amount",
+   "no_copy": 1,
+   "precision": "2",
+   "print_hide": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "no_copy": 1,
+   "options": "Draft\nSubmitted\nBooked\nCancelled\nCompleted",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "tracking_url",
+   "fieldtype": "Small Text",
+   "hidden": 1,
+   "label": "Tracking URL",
+   "no_copy": 1,
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_55",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "incoterm",
+   "fieldtype": "Link",
+   "label": "Incoterm",
+   "options": "Incoterm"
+  },
+  {
+   "fieldname": "shipment_delivery_note",
+   "fieldtype": "Table",
+   "label": "Shipment Delivery Note",
+   "options": "Shipment Delivery Note"
+  },
+  {
+   "depends_on": "eval:doc.pickup_from_type === 'Company'",
+   "fieldname": "pickup_contact_person",
+   "fieldtype": "Link",
+   "label": "Pickup Contact Person",
+   "options": "User"
+  },
+  {
+   "fieldname": "total_weight",
+   "fieldtype": "Float",
+   "label": "Total Weight (kg)",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_jixj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sales_invoice",
+   "fieldtype": "Table",
+   "label": "Sales Invoice",
+   "options": "Sales Invoice Shipment"
+  },
+  {
+   "default": "FORWARD",
+   "fieldname": "delivery_type",
+   "fieldtype": "Select",
+   "label": "Delivery Type",
+   "options": "\nFORWARD\nRVP"
+  },
+  {
+   "default": "PREPAID",
+   "fieldname": "order_type",
+   "fieldtype": "Select",
+   "label": "Order Type",
+   "options": "\nCOD\nPREPAID"
+  },
+  {
+   "depends_on": "evaldoc.order_type==\"COD\"",
+   "fieldname": "cod_value",
+   "fieldtype": "Currency",
+   "label": "COD Value"
+  },
+  {
+   "fetch_from": "delivery_address_name.phone",
+   "fieldname": "delivery_contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "fetch_from": "pickup_contact_person.full_name",
+   "fieldname": "pickup_contact_person_name",
+   "fieldtype": "Data",
+   "label": "Contact Person Name"
+  },
+  {
+   "fetch_from": "pickup_address_name.phone",
+   "fieldname": "pickup_contact_phone",
+   "fieldtype": "Data",
+   "label": "Contact Phone"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "appointment_info_section",
+   "fieldtype": "Section Break",
+   "label": "Appointment Info"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "start_time",
+   "fieldtype": "Datetime",
+   "label": "Start Time"
+  },
+  {
+   "fieldname": "column_break_zyrm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "end_time",
+   "fieldtype": "Datetime",
+   "label": "End Time"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "reason_for_appointment",
+   "fieldtype": "Data",
+   "label": "Reason for Appointment"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "appointment_attachments",
+   "fieldtype": "Small Text",
+   "label": "Appointment Attachments",
+   "options": "Multiple Attachments",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "appointment_status",
+   "fieldtype": "Data",
+   "label": "Appointment Status"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-05-22 03:35:17.793877",
+ "modified_by": "Administrator",
+ "module": "Clickpost Erpnext Integration",
+ "name": "AWB Registration",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Sales Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Delivery User",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Delivery Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
